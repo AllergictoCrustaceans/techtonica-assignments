@@ -1,0 +1,75 @@
+1.) I exhibit professional by show ethics and respect unto myself and unto others while at Techtonica. In a full-time engineering job, I presume the environment is more fast-paced, and people are expected to learn quickly on the job, to make collaborating with the collective more efficient.
+
+ 
+
+2.) If I realized I have no choice but to be an hour late tomorrow morning, I will notify my colleagues immediately, and ask what work I can do and expedite tonight to make up for the lost time tomorrow.
+
+ 
+
+3.) I would tell the head of my software engineering team about the potential shortcoming, and ask if we can adjust my workload, find other times to complete the tasks.
+
+ 
+
+4.) I learned that I am more of a visual learner, and digest learning materials easier with hands-on practice.
+
+ 
+
+5.) The growth mindset is a concept that teaches people can still learn at a good rate by embracing challenges with a positive attitude.
+
+ 
+
+6.) I have a personal laptop, which has Windows OS. The other popular operating systems are iOS and Linux.
+
+ 
+
+7.) Computers need operating systems (OS) because OS' manage/ set-up how users interact with the downloaded applications.
+
+ 
+
+8.) If I was stuck on a coding problem, I would first search for similar problems online (e.g. Stack Overflow, Youtube, etc). If I cannot find a solution similar to my problem, or cannot understand the solution proposed to my problem, I will reach out to a fellow colleague for some guidance.
+
+ 
+
+9.) I plan to keep my promises made to people (follow through with what I promised to do with/for them). I plan to get to know new connections on a deeper level, see them not only as programmers, but as people with interesting stories and genuine dreams.
+
+ 
+
+10.) Some effective body language are:
+
+Showing open arms: When arms are open, it makes you seem more approachable, and encourages other people to start/continue the discussion.
+Making eye contact: When making eye contact, it shows the other party that you are paying attention and engaged in what they have to say. This encourages further sharing/discussions.
+Standing at an appropriate distance: When giving everybody some space, this creates a comfortable setting.
+ 
+
+11.) Some effective word choices are:
+
+Saying "Thank You": Regardless of whether the person successfully helped you or not, it is important to say "Thank You" to indicate you appreciate them spending the time and effort for you.
+Saying "Would you like to": Asking in this way presents the other party the choice to offer help and time to you, or decline so they don't feel forced to help.
+Saying "I would love your input": This encourages the other party to share their thoughts and work, and giving them personal attention to the discussion at hand.
+ 
+
+12.) I can build trust within a team by being inclusive, keeping pure intent when interacting such as telling stories and sharing thoughts, and establishing mutual respect amongst ourselves.
+
+ 
+
+13.) Devices on the internet are physically connected to each other via binary information of bits (0 or 1).
+
+ 
+
+14.) Information is physically transmitted from device to device through electricity(copper wire), light (fiber optic cables underground/underwater) , or wavelengths (wifi). 
+
+ 
+
+15.) To check the IP address of the users' URL: Browser =>  OS => Resolving name server => Root name server OR Top Level Domain server OR Authoritative Name Servers. The resolving name server would know which network server to check for the IP address based on the URL's domain registrar. After retrieving IP address from any one of the servers, the resolver bounces information back to the OS, who bounces information back to the browser, who can load the URL page the user typed in.
+
+ 
+
+15.) Devices can talk to one another via each of their network card and MAC address. When a packet with a particular MAC address is sent, it is sent to a router. Then the router uses the BGP protocol to determine where the packet should go.
+
+ 
+
+16.) Devices use the HTTP method, and sends a GET request to receive packets of data from another server. Once the server receives a GET request from a device of a particular IP address, the server creates a cookie ID for that device to account for future requests from that device.
+
+ 
+
+17.) Data can still be sent reliably as long as there are enough routers. More routers means more reliability in sending packets to its destination (this is called being fault tolerant). Data can also be reliably sent with Transmission Control Protocol (TCP). 
