@@ -116,7 +116,7 @@ pet.age = 14;
 
 
 //Exercise 15 Add. a new file to the $PATH environmental variable
-export PATH=$PATH:$HOME/what/why
+// export PATH=$PATH:$HOME/what/why
 
 //Exercise 16. Please explain how the internet works. Your answer should include answers to the following questions: 
 // The internet physically connects and transmits information through cables, binary information, and communicates with other devices through identifying IP addresses. 
