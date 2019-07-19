@@ -1,0 +1,100 @@
+body {
+    margin-left: 20px;
+    text-align: center;
+    float: none;
+}
+
+nav {
+    background-color: black;
+}
+
+.nav-item {
+    padding: 0px 70px;
+}
+
+.jarallax {
+    background: url('https://annieliciousfood.files.wordpress.com/2012/03/img_5316.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 80px;
+    font-weight: bold;
+    padding: 300px;
+    text-align: center;
+    float: none;
+}
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 44px;
+    font-weight: bold;
+    color: maroon;
+    padding: 50px;
+    text-align: center;
+    float: none;
+}
+
+h3 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 34px;
+    font-weight: bold;
+    color: darkblue;
+    padding: 10px;
+    text-align: center;
+    float: none;
+}
+
+p {
+    font-family: 'Amatic SC', cursive;
+    font-size: 28px;
+    color: black;
+    font-weight: bold;
+}
+
+.ingredients {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.left {
+    font-family: 'Amatic SC', cursive;
+    font-size: 28px;
+    float: none;
+    margin-top: 30px;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.procedure {
+    list-style-type: none;
+     padding: 0px 0px 50px 0px;
+}
+
+img {
+    width: 0%;
+}
+
+@media (min-width:992px) {
+    img {
+        width: 100%;
+    }
+    .row{
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width:320px) {
+    img {
+        width: 100%;
+    }
+    .row {
+        font-size: 1.5rem;
+    }
+}
