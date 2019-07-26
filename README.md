@@ -9,4 +9,8 @@ The following order of assignment submissions is as follows:
 
 3.) JSReview 
 
+4.) testingMindset.js 
+
+5.) dateTime.js
+
 More to come...
