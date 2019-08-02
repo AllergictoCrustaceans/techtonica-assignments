@@ -67,7 +67,7 @@ console.timeEnd('findDuplicatesB');
     As long as i < array.length -1 , i will increment. Each iteration will have a variable item, with a value array[i], and nextItem, with a value of array[i + 1].
     If the value of variable item equals the value of variable nextItem, then push the value of item into the duplicates empty array.
     Lastly, return the duplicates array. 
-2.) Runtime Complexity: O(n), 0.180ms.
+2.) Runtime Complexity: O(NlogN) <= maybe, 0.180ms.
 */
 console.time('findDuplicatesC');
   const findDuplicatesC = (array) => {
