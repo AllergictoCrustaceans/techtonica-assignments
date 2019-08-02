@@ -19,10 +19,12 @@ The following order of assignment submissions is as follows:
 
 8.) whiteboardPart2.js
 
-9.) runtime1-analyzing.js
+9.) pingPong.js
 
-10.) runtime2-comparison.js
+10.) runtime1-analyzing.js
 
-11.) runtime3-solving.js
+11.) runtime2-comparisons.js
+
+12.) runtime3-solving.js
 
 More to come...
