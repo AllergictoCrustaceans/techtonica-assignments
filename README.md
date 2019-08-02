@@ -13,4 +13,10 @@ The following order of assignment submissions is as follows:
 
 5.) dateTime.js
 
+6.) debugMe.js
+
+7.) whiteboardPart1.js
+
+8.) whiteboardPart2.js
+
 More to come...
