@@ -4,52 +4,44 @@ Can you think of an O(n^2), O(n log n), and O(n) solution to each problem?
 If you have time, code one of the functions you thought of to solve the problem.
 */
 
+
 /* 
 Find the integer that occurs most frequently in an array
 Examples: 
 - `[1,4,5,4,2,2,4]` returns `4`
 */
 
-//Runtime Complexity: O(n^2), 
+//Runtime Complexity: O(n), 0.244ms
+console.time('question1');
 function question1(array) {
-    if(Array.isArray(array)) {
-        var result = [];
-        var obj = {};
-        for(let i = 0; i < array.length; i++) {
-            obj[array[i]] = 0;
-            console.log(obj[array[i]]);
+    if(array.length === 0) {
+        return null;
+    }
+    var modeMap = {};
+    var maxEl = array[0], maxCount = 1;
+    for(let i = 0; i < array.length; i++) {
+        var el = array[i];
+        if(modeMap[el] === null) {
+            modeMap[el] = 1;
+        } else {
+            modeMap[el]++;
+            if(modeMap[el] > maxCount) {
+                maxEl = el;
+                maxCount = modeMap[el];
+            }
         }
-        for(i in obj) {
-            result.push(i);
-        }
-        return result;
+        return maxEl;
     }
 }
 
-question1([1,2,3,2,5,5]);
+ question1([1,2,3,2,5,5]);
+ console.timeEnd('question1');
 
 /* 
 Write a function that takes an array of numbers and returns the greatest difference you can get by subtracting any two of those numbers.
 Examples:
 - `[1, 5, 3, 1, 15]` returns `14`
 */
-function question2(array) {
-    if(Array.isArray(array)) {
-        for(let i = 0; i < array.length; i++) {
-            for(let j = 0; j < array.length; j++) {
-                console.log(array[i], array[j]);
-                if(array[i] === array[j]) {
-                    console.log(array[j]); 
-                }
-                else {
-                    console.log('no matches');
-                }
-            }
-        }
-    }
-}
-
-question2([4,8,2,3,1]);
 
 /*
 Find the only element in an array that only occurs once
