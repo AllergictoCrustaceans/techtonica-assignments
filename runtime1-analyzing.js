@@ -244,7 +244,7 @@ console.timeEnd('mysteryFunction6');
         If it does, return true. If lookingFor's value is less than array[guessIndex], then make upperBound = guessIndex -1.
         If none of the conditions above are met, then lowerBound = guessIndex + 1.
         After the while condition, have guessIndex value equal the rounded down value of (lowerBound + upperBound) / 2.
-  2.) Runtime Complexity: O(1) 
+  2.) Runtime Complexity: O(logN) 
   3.) 1st function, runtime is 0.313ms.
       2nd function, runtime is 0.321ms.
   4.) Based on answer from question 3, the longer the array, the longer the runtime. 
