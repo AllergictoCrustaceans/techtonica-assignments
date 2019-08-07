@@ -1,8 +1,16 @@
 class Event {
-    constructor(name, description) {
+    constructor(name, date, description, ticketType, ticketPrice) {
       this.name = name;
+      this.date = date;
       this.description = description;
-      this.availableTickets = []
+      this.availableTickets = [];
+      this._ticketType = ticketType;
+      this._ticketPrice = ticketPrice;
+    }
+
+    get addAvailableTickets(ticketType, ticketPrice) {
+        return this._ticketType;
+        return this._ticketPrice;
     }
   }
 
@@ -23,13 +31,6 @@ $(document).ready(function() {
     // insert final html into #event...
     $("#event").html(html);
 });
-
-class addAvailableTickets extends Events {
-    constructor(ticketType, ticketPrice) {
-        this._ticketType = ticketType;
-        this._ticketPrice = ticketPrice;
-    }
-} 
 
 event_obj2.addAvailableTickets("General Admission", 25)
 event_obj2.addAvailableTickets("Floor Seating", 80)
