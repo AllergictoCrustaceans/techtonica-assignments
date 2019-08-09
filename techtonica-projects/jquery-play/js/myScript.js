@@ -22,8 +22,9 @@ $(document).ready(function() {
 
 $(document).ready(function(){
   $("#blue-sentence").hover(function(){
+    $(this).css("font-size", "28px");
     $(this).css("background-color", "yellow");
     }, function(){
-    $(this).css("background-color", "pink");
+    $(this).css("background-color", "white");
   });
 });
