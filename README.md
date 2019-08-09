@@ -27,4 +27,8 @@ The following order of assignment submissions is as follows:
 
 12.) runtime3-solving.js
 
+13.) techtonica-projects/jquery-play 
+
+14.) OOPinJS
+
 More to come...
