@@ -35,8 +35,10 @@ class Event {
                 ticketArray.push(item);
                 var cheapest = Math.min(...ticketArray);
                 //find the ticket type that includes the cheapest price variable.
-                event_array.find(function(cheapest) {
-                    console.log(item.includes(cheapest));
+                event_array.find(function() {
+                    if(event_array[i]._availableTickets[j]._ticketPrice === cheapest){
+                        console.log(event_array[i]._availableTickets[j]);
+                    };
                 });
             }
         }
@@ -76,7 +78,7 @@ $(document).ready(function () {
 // $(document).ready(function() {
 //     let text = "";
 //     $.each(cheapestTicketArray, function(index) {
-//         text += `<li>${Event.ticketPrice}</li>`;
+//         text += `<li>${item.ticketPrice}</li>`;
 //     });
 //     $("#event").html(text);
 // });
