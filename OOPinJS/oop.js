@@ -12,83 +12,105 @@ class EventRecommender {
         this._users.push(userName);
     }
 
-    saveUserEvent(userName, eventName) {
-        this._users.find(() => {
-            /*
-            *
-            *TODO: how to save user and event together? wtf if this method even for.
-            * 
-            */
-            return userName;
-            this._users.userName.addUserEvent(this._events.eventName);
-        });
-    }
+    // saveUserEvent(userName, eventName) {
+    //     this._users.find(() => {
+    //         /*
+    //         *
+    //         *TODO: how to save user and event together? wtf if this method even for.
+    //         * save event under user class
+    //         * 
+    //         */
+    //         return userName;
+    //         this._users.userName.addUserEvent(this._events.eventName);
+    //     });
+    // }
 
     deleteUser(userName) {
-    // delete the events that are associated along with the userName too
-        if(this._users.includes(userName)) {
-            var indexUser = this.users.indexOf(userName);
-            this.users.splice(indexUser, 1);
-        }
+        var indexUser = '';
+        for(let i = 0; i < this._users.length; i++) {
+            if(this._users[i].userName === userName) {
+                indexUser = i;
+                break;
+            }
+        } 
+        delete this._users[indexUser];
+        this._users.splice(indexUser, 1);
         console.log(this.users);
     }
    
-    deleteEvent(event) {
-    // Deletes the Event from the system
-        if(this.events.includes(event)) {
-            var indexEvent = this.events.indexOf(event);
-            this.events.splice(indexEvent, 1);
-        }
+    deleteEvent(userEvents) {
+        var indexEvent = '';
+        for(let i = 0; i < this._events.length; i++) {
+            console.log('aaaaa ',this._events[i])
+            if(this._events[i]._eventName === userEvents) {
+                indexEvent = i;
+                break;
+            }
+            
+        } 
+        delete this._events[indexEvent];
+        this._events.splice(indexEvent, 1);
         console.log(this.events);
     }
 
-    filter(eventName, eventDescription, eventDate) {
-        //filter for certain events, by name or date. 
-        results = '';
-        for(event in this._events) {
-            if(this.events.includes(eventName)) {
-                results += <li></li>
-            } 
-            else if(this.events.includes(eventDescription)) {
+    filter(type, input) {
+        var results = [];
+        if(type === 0) {
+            for(let i = 0; i < this._events.length; i++) {
+                var filterDate = this._events[i]._eventDate === input;
+                if(filterDate) {
+                    results.push(this._events[i]);
     
+                } 
+            }       
+        } 
+        else if(type === 1) {
+            for(let i = 0; i < this._events.length; i++) {
+                var filterPlace = this._events[i]._eventPlace === input;
+                if(filterPlace) {
+                    results.push(this._events[i]);
+                }
             }
-            else if(this.events.includes(eventDate)) {
-    
-            }
-        }
+        } 
+        console.log(results);
     }
 }
 
-class User {
-    constructor (userName, userEvents=[]) {
+class User{
+    constructor (userName) {
         this._userName = userName;
-        this._userEvents = userEvents;
+        this._userEvents = [];
     }
 
     addUserEvent(event) {
-        this._events.push(event);
+        this._userEvents.push(event);
     }
 }
 
 class Event {
-    constructor (eventName, eventDescription, eventDate) {
+    constructor (eventName, eventDescription, eventDate, eventPlace) {
         this._eventName = eventName;
         this._eventDescription = eventDescription;
         this._eventDate = eventDate;
+        this._eventPlace = eventPlace;
     }
 }
 
-const event1 = new Event('Ice Cream', 'eat ice cream', '08/08/2019');
-const event2 = new Event('Sleep', 'sleep', '08/09/2019');
+const event1 = new Event('Ice Cream', 'eat ice cream', '08/08/2019', 'San Francisco');
+const event2 = new Event('Sleep', 'sleep', '08/09/2019', 'Austria');
 
 const user1 = new User('Katie');
-const user2 = new User('Wu', event1);
+const user2 = new User('Wu');
+user2.addUserEvent(event1);
 
 const eventRecommender = new EventRecommender();
 eventRecommender.addUser(user1);
 eventRecommender.addUser(user2);
 eventRecommender.addEvent(event1);
 eventRecommender.addEvent(event2);
+eventRecommender.filter(0, '08/08/2019');
+eventRecommender.filter(1, 'Austria');
 // eventRecommender.saveUserEvent(user1, [event1, event2]);
-eventRecommender.deleteUser(user1);
+// eventRecommender.deleteUser('Katie');
+// eventRecommender.deleteEvent('Sleep');
 console.log(eventRecommender); 
