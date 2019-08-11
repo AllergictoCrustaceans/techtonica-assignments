@@ -16,7 +16,7 @@ body {
     min-height: 100%;
 }
 
-#pause:hover {
+#videoButton:hover {
     background: #ddd;
     color: black;
 }
