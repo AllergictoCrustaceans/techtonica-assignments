@@ -2,7 +2,6 @@ class EventRecommender {
     constructor(users, event) {    
     this._events = [];
     this._users = [];
-    
     }
 
     addEvent(userEvent) {
@@ -15,6 +14,11 @@ class EventRecommender {
 
     saveUserEvent(userName, eventName) {
         this._users.find(() => {
+            /*
+            *
+            *TODO: how to save user and event together? wtf if this method even for.
+            * 
+            */
             return userName;
             this._users.userName.addUserEvent(this._events.eventName);
         });
@@ -22,16 +26,36 @@ class EventRecommender {
 
     deleteUser(userName) {
     // delete the events that are associated along with the userName too
-
+        if(this._users.includes(userName)) {
+            var indexUser = this.users.indexOf(userName);
+            this.users.splice(indexUser, 1);
+        }
+        console.log(this.users);
     }
    
     deleteEvent(event) {
     // Deletes the Event from the system
+        if(this.events.includes(event)) {
+            var indexEvent = this.events.indexOf(event);
+            this.events.splice(indexEvent, 1);
+        }
+        console.log(this.events);
     }
 
-    filter(eventName) {
+    filter(eventName, eventDescription, eventDate) {
         //filter for certain events, by name or date. 
-
+        results = '';
+        for(event in this._events) {
+            if(this.events.includes(eventName)) {
+                results += <li></li>
+            } 
+            else if(this.events.includes(eventDescription)) {
+    
+            }
+            else if(this.events.includes(eventDate)) {
+    
+            }
+        }
     }
 }
 
@@ -66,5 +90,5 @@ eventRecommender.addUser(user2);
 eventRecommender.addEvent(event1);
 eventRecommender.addEvent(event2);
 // eventRecommender.saveUserEvent(user1, [event1, event2]);
-
+eventRecommender.deleteUser(user1);
 console.log(eventRecommender); 
