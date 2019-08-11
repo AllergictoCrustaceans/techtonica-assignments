@@ -69,7 +69,7 @@ event_array.push(event_obj1, event_obj2, event_obj3);
 $(document).ready(function () {
     let html = "";
     $.each(event_array, function (index, item) {
-        html += `<li>${item._name} - ${item._description} - Eligible Tickets: ${item._availableTickets}` ;
+        html += `<li>${item._name} - ${item._description} - Eligible Tickets: ${item.searchTickets()}` ;
     });
     // insert final html into #event...
     $("#event").html(html);
