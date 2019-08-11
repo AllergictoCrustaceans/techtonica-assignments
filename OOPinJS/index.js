@@ -37,6 +37,11 @@ class Event {
                 //find the ticket type that includes the cheapest price variable.
                 event_array.find(function() {
                     if(event_array[i]._availableTickets[j]._ticketPrice === cheapest){
+                        /*
+                        *
+                        * TODO: get cheapest tickets for each event to show up
+                        * 
+                        */
                         console.log(event_array[i]._availableTickets[j]);
                     };
                 });
@@ -69,6 +74,11 @@ event_array.push(event_obj1, event_obj2, event_obj3);
 $(document).ready(function () {
     let html = "";
     $.each(event_array, function (index, item) {
+        /*
+        *
+        * TODO: MAKE TICKETS SHOW UP FOR searchTickets() AND cheapestTickets().
+        * 
+        */
         html += `<li>${item._name} - ${item._description} - Eligible Tickets: ${item.searchTickets()}` ;
     });
     // insert final html into #event...
