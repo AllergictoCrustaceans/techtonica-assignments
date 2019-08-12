@@ -8,7 +8,7 @@ describe("EventRecommender", () => {
   
     describe("addEvent", () => {
       it("adds a new Event to the system", () => {
-        er.addEvent("Change Me");
+        er.addEvent(event1);
         expect(er.events.length).toEqual(1);
         expect(er.events[0].title).toEqual("Change Me"); // what are some other things you can test?
       });
@@ -16,7 +16,7 @@ describe("EventRecommender", () => {
     
     describe("addUser", () => {
       it("adds a new User to the system", () => {
-        er.addUser("Change Me");
+        er.addUser(user1);
         expect(er.user.length).toEqual(1);
       });
     });
@@ -33,7 +33,7 @@ describe("EventRecommender", () => {
     describe("deleteUser", () => {
       it("removes a User from the system", () => {
         er.addUser("Make a new user here that you will delete later");
-        er.deleteUser("Change Me");
+        er.deleteUser(user1);
         expect(er.user.length).toEqual(0);
       });
     });
@@ -41,7 +41,7 @@ describe("EventRecommender", () => {
     describe("deleteEvent", () => {
       it("removes the event from the system", () => {
         er.addEvent("A new event that you will delete later");
-        er.deleteEvent("Change Me");
+        er.deleteEvent(event1);
         expect(er.events.length).toEqual(0);
       });
     });
