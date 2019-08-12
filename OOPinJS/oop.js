@@ -41,7 +41,7 @@ class EventRecommender {
     deleteEvent(userEvents) {
         var indexEvent = '';
         for(let i = 0; i < this._events.length; i++) {
-            console.log('aaaaa ',this._events[i])
+            console.log(this._events[i])
             if(this._events[i]._eventName === userEvents) {
                 indexEvent = i;
                 break;
