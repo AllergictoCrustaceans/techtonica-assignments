@@ -16,8 +16,7 @@ class EventRecommender {
     //     this._users.find(() => {
     //         /*
     //         *
-    //         *TODO: how to save user and event together? wtf if this method even for.
-    //         * save event under user class
+    //         *TODO: save userEvent by adding up all the tickets prices. 
     //         * 
     //         */
     //         return userName;
