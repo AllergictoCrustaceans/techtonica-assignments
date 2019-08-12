@@ -87,16 +87,17 @@ class User{
 }
 
 class Event {
-    constructor (eventName, eventDescription, eventDate, eventPlace) {
-        this._eventName = eventName;
-        this._eventDescription = eventDescription;
+    constructor (eventDate, eventPlace, eventName, eventDescription, eventPrice) {
         this._eventDate = eventDate;
         this._eventPlace = eventPlace;
+        this._eventName = eventName;
+        this._eventDescription = eventDescription;
+        this._eventPrice = eventPrice;
     }
 }
 
-const event1 = new Event('Ice Cream', 'eat ice cream', '08/08/2019', 'San Francisco');
-const event2 = new Event('Sleep', 'sleep', '08/09/2019', 'Austria');
+const event1 = new Event('08/08/2019', 'San Francisco', 'Gladiator', 'Gladiator Film Score', 70);
+const event2 = new Event('08/09/2019', 'Austria', 'Inception', 'Inception Film Score', 70);
 
 const user1 = new User('Katie');
 const user2 = new User('Wu');
@@ -110,6 +111,6 @@ eventRecommender.addEvent(event2);
 eventRecommender.filter(0, '08/08/2019');
 eventRecommender.filter(1, 'Austria');
 // eventRecommender.saveUserEvent(user1, [event1, event2]);
-// eventRecommender.deleteUser('Katie');
-// eventRecommender.deleteEvent('Sleep');
+eventRecommender.deleteUser('Katie');
+eventRecommender.deleteEvent('Sleep');
 console.log(eventRecommender); 
