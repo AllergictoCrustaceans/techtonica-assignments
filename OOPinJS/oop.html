@@ -75,7 +75,9 @@
 
                     <!-- this form should be hidden until a user can authorize their identity--> 
                     <form>
+                            <input id="searchInput" value="Type To Filter">
                             <input type="text" id="eventDate" placeholder="Event Date">
+                            <input type="text" id="eventPlace" placeholder="Event Place">
                             <input type="text" id="eventName" placeholder="Event Name">
                             <input type="text" id="eventDescription" placeholder="Event Description">
                             <input type="text" id="eventPrice" placeholder = "Event Price">
@@ -91,6 +93,7 @@
                                 <tr>
                                     <th>Select</th>
                                     <th>Event Date</th>
+                                    <th>Event Place</th>
                                     <th>Event Name</th>
                                     <th>Event Description</th>
                                     <th>Event Price</th>
@@ -98,10 +101,6 @@
                             </thead>
                             <tbody class="eventtBody">
                                 <tr>
-                    
-                                    
-                                    
-                                    
                                 </tr>
                             </tbody>
                         </table>
@@ -148,12 +147,6 @@
 
 
 
-                </div>
-
-                <div class="userEdits">
-                    <label for="basic">Add Patron:</label>
-                    <input type="text" name="name" id="basic" value="">
-                    <button style = "display: inline-block;" type = "button" class="add">Add</button>
                 </div>
                 </div>
                 <div class="modal-footer">
