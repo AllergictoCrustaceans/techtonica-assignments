@@ -9,12 +9,21 @@ var free = document.getElementById('free');
 
     $(document).ready(function(){
         $("#add-rowEvent").click(function(){
-            var eventName = $("#eventName").val();
             var eventDate = $("#eventDate").val();
+            var eventPlace = $("#eventPlace").val();
+            var eventName = $("#eventName").val();
             var eventDescription = $("#eventDescription").val();
             var eventPrice = $("#eventPrice").val();
-            var markupEvent = "<tr><td><input type='checkbox' name='recordEvent'></td><td>" + eventDate + "</td><td>" + eventName + "</td><td>" + eventDescription + "</td><td>" + eventPrice + "</td></tr>";
-            $(".eventtBody").append(markup);
+            var markupEvent = "<tr><td><input type='checkbox' name='recordEvent'></td><td>" + eventDate + "</td><td>" + eventPlace + "</td><td>" + eventName + "</td><td>" + eventDescription + "</td><td>" + eventPrice + "</td></tr>";
+            $(".eventtBody").append(markupEvent);
+            const event1 = new Event(eventDate, eventPlace, eventName, eventDescription, eventPrice);
+            eventRecommender.addEvent(event1);
+            $('#eventDate').val('');  
+            $('#eventPlace').val('');
+            $('#eventName').val('');
+            $('#eventDescription').val('');
+            $('#eventPrice').val('');  
+            console.log(eventRecommender);
         });
         
         // Find and remove selected table rows
@@ -22,6 +31,7 @@ var free = document.getElementById('free');
             $("table tbody").find('input[name="recordEvent"]').each(function(){
             	if($(this).is(":checked")){
                     $(this).parents("tr").remove();
+                    eventRecommender.deleteEvent(event1);
                 }
             });
         });
@@ -34,17 +44,22 @@ var free = document.getElementById('free');
         $("#add-rowUser").click(function(){
             var userName = $("#userName").val();
             var markupUser = "<tr><td><input type='checkbox' name='recordUser'></td><td>" + userName + "</td></tr>";
-            //$("table tbody").append(markupUser);
             $(".usertBody").append(markupUser);
+            const user1 = new User(userName);
+            eventRecommender.addUser(user1);
+            $('#userName').val('');    
+            console.log(eventRecommender);
+        // delete user button on the right if row is selected. 
         });
+    });
 
        
-    //if checkbox selected, show delete user button, and remove tr.
-    $('input[name="recordUser]').each(function() {
-        if($(this).is(":checked")) {
-            $("#delete-rowUser").show();
-        }
-    });
+    // //if checkbox selected, show delete user button, and remove tr.
+    // $('input[name="recordUser]').each(function() {
+    //     if($(this).is(":checked")) {
+    //         $('#delete-rowUser"').show();
+    //     }
+    // });
     
         
         // Find and remove selected table rows
@@ -52,24 +67,20 @@ var free = document.getElementById('free');
             $("table tbody").find('input[name="recordUser"]').each(function(){
                 if($(this).is(":checked")){
                     $(this).parents("tr").remove();
+                    eventRecommender.deleteUser(user1);
+                    console.log(eventRecommender);
                 }
             });
         });
-    });
+    // });
 
 
-// button to add text input of user (these can be deleted)
-    //User click generate to generate a user row onto the bottom of the modal,
-    $('.add').on('click', function() {
-        var inputName = $('#basic').val();
-        const user1 = new User(inputName);
-        eventRecommender.addUser(user1);
-        $('#basic').val('');    
-        console.log(eventRecommender);
-        //make sure user shows up on the bottom portion of the modal.
-        // delete user button on the right if row is selected. 
-    });
-    // - will delete user from row on the bottom of the modal
+
+    // addUserEvent() with add Event Button.
+        $('#addToUser').click(function() {
+            user1.addUserEvent(event1);
+            //add selected event to specific user.
+        })
 
 
 // button to add/delete text input of event (these can be edited)
