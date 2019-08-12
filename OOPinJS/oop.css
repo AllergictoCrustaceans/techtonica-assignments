@@ -66,24 +66,29 @@ table th, table td{
     display: inline-block;
     margin: 25px;
     color: white;
+    background-color: rgba(0,0,0,0.5);
 }
 #delete-rowEvent {
     display: inline-block;
     margin: 25px;
     color: white;
+    background-color: rgba(0,0,0,0.5);
 }
 #addToUser {
     display: inline-block;
     margin: 25px;
     color: white;
+    background-color: rgba(0,0,0,0.5);
 }
 #add-rowUser {
     display: inline-block;
     margin: 25px;
     color: white;
+    background-color: rgba(0,0,0,0.5);
 }
 #delete-rowUser {
    margin: 25px;
-   display: none;
+   /* display: none; */
    color: white;
+   background-color: rgba(0,0,0,0.5);
 }
