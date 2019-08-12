@@ -71,13 +71,18 @@
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 style = "text-align: center;"class="modal-title">Event Dates</h4>
                   </div>
                   <div class="modal-body">
-                    <h4 class="modal-title">Event Dates</h4>
-                    <!-- 
+                    <div class="defaultEvents">
+                        <!-- Default events. -->
+                    </div>
 
-                        Need to fill with default tour events
-                     -->
+                    <div class="userEdits">
+                        <label for="basic">Add Patron:</label>
+                        <input type="text" name="name" id="basic" value="">
+                        <button style = "display: inline-block;" type = "button" class="add">Add</button>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Finalize Order </button>
