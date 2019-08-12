@@ -24,8 +24,8 @@ function pause() {
         var inputName = $('#basic').val();
         const user1 = new User(inputName);
         eventRecommender.addUser(user1);
+        $('#basic').val('');         //clear userInput after adding
         console.log(eventRecommender);
-        //clear userInput after adding
         //make sure user shows up on the bottom portion of the modal.
         // delete user button on the right if row is selected. 
     });
