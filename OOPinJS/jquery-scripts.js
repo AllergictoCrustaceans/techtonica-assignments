@@ -4,8 +4,11 @@ var free = document.getElementById('free');
 
 //default list of tour events within the modal (these cannot be deleted)
     //this has a + and - sign next to the tour events. 
+
+
+
     $(document).ready(function(){
-        $(".add-rowEvent").click(function(){
+        $("#add-rowEvent").click(function(){
             var eventName = $("#eventName").val();
             var eventDate = $("#eventDate").val();
             var eventDescription = $("#eventDescription").val();
@@ -15,7 +18,7 @@ var free = document.getElementById('free');
         });
         
         // Find and remove selected table rows
-        $(".delete-rowEvent").click(function(){
+        $("#delete-rowEvent").click(function(){
             $("table tbody").find('input[name="recordEvent"]').each(function(){
             	if($(this).is(":checked")){
                     $(this).parents("tr").remove();
@@ -28,15 +31,24 @@ var free = document.getElementById('free');
     
     
     $(document).ready(function(){
-        $(".add-rowUser").click(function(){
+        $("#add-rowUser").click(function(){
             var userName = $("#userName").val();
             var markupUser = "<tr><td><input type='checkbox' name='recordUser'></td><td>" + userName + "</td></tr>";
             //$("table tbody").append(markupUser);
             $(".usertBody").append(markupUser);
         });
 
+       
+    //if checkbox selected, show delete user button, and remove tr.
+    $('input[name="recordUser]').each(function() {
+        if($(this).is(":checked")) {
+            $("#delete-rowUser").show();
+        }
+    });
+    
+        
         // Find and remove selected table rows
-        $(".delete-rowUser").click(function(){
+        $("#delete-rowUser").click(function(){
             $("table tbody").find('input[name="recordUser"]').each(function(){
                 if($(this).is(":checked")){
                     $(this).parents("tr").remove();
@@ -44,6 +56,7 @@ var free = document.getElementById('free');
             });
         });
     });
+
 
 // button to add text input of user (these can be deleted)
     //User click generate to generate a user row onto the bottom of the modal,
