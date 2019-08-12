@@ -19,6 +19,7 @@ var free = document.getElementById('free');
             $("table tbody").find('input[name="record"]').each(function(){
             	if($(this).is(":checked")){
                     $(this).parents("tr").remove();
+                    // eventRecommender.deleteUser(event1);
                 }
             });
         });
@@ -30,7 +31,7 @@ var free = document.getElementById('free');
         var inputName = $('#basic').val();
         const user1 = new User(inputName);
         eventRecommender.addUser(user1);
-        $('#basic').val('');         //clear userInput after adding
+        $('#basic').val('');    
         console.log(eventRecommender);
         //make sure user shows up on the bottom portion of the modal.
         // delete user button on the right if row is selected. 
