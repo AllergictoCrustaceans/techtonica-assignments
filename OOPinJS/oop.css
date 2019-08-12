@@ -62,3 +62,7 @@ table th, table td{
     padding: 10px;
     text-align: left;
 }
+button {
+    display: block;
+    margin: 25px;
+}
