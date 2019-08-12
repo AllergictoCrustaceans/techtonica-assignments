@@ -79,7 +79,7 @@ var free = document.getElementById('free');
     // addUserEvent() with add Event Button.
         $('#addToUser').click(function() {
             //copy row to be added as a column next to user name   
-        var markupUserHead = "<th>Events Added</th>";
+        var markupUserHead = "<tr><th>Events Added</th></tr>";
         $(".usertBody").append(markupUserHead);
         var getSelectedRows = $(".eventTable input:checked").parents('tr');
         $(".userTable tbody").append(getSelectedRows);
