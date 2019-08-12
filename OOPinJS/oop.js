@@ -114,3 +114,6 @@ eventRecommender.filter(1, 'Austria');
 eventRecommender.deleteUser('Katie');
 eventRecommender.deleteEvent('Sleep');
 console.log(eventRecommender); 
+
+
+module.exports = EventRecommender;
