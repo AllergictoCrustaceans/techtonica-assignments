@@ -62,7 +62,19 @@ table th, table td{
     padding: 10px;
     text-align: left;
 }
-button {
-    display: block;
+#add-rowEvent {
+    display: inline-block;
     margin: 25px;
+}
+#delete-rowEvent {
+    display: inline-block;
+    margin: 25px;
+}
+#addToUser {
+    display: inline-block;
+    margin: 25px;
+}
+#delete-rowUser {
+   margin: 25px;
+   display: hidden;
 }
