@@ -65,16 +65,25 @@ table th, table td{
 #add-rowEvent {
     display: inline-block;
     margin: 25px;
+    color: white;
 }
 #delete-rowEvent {
     display: inline-block;
     margin: 25px;
+    color: white;
 }
 #addToUser {
     display: inline-block;
     margin: 25px;
+    color: white;
+}
+#add-rowUser {
+    display: inline-block;
+    margin: 25px;
+    color: white;
 }
 #delete-rowUser {
    margin: 25px;
-   display: hidden;
+   display: none;
+   color: white;
 }
