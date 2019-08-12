@@ -70,35 +70,62 @@
                 </div>
                 <div class="modal-body">
                 <div class="defaultEvents">
-                    <!-- Add USER name -->
+
                     <form>
                         <input type="text" id="eventDate" placeholder="Event Date">
                         <input type="text" id="eventName" placeholder="Event Name">
                         <input type="text" id="eventDescription" placeholder="Event Description">
                         <input type="text" id="eventPrice" placeholder = "Event Price">
                         
-                        <input type="button" class="add-row" value="Add Row">
+                        <input type="button" class="add-rowEvent" value="Add Row">
                     </form>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Select</th>
-                                <th>Event Date</th>
-                                <th>Event Name</th>
-                                <th>Event Description</th>
-                                <th>Event Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input type="checkbox" name="record"></td>
-                                <!--<td>Peter Parker</td>
-                                <td>peterparker@mail.com</td>-->
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button type="button" class="delete-row">Delete Row</button>
-
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Event Date</th>
+                                    <th>Event Name</th>
+                                    <th>Event Description</th>
+                                    <th>Event Price</th>
+                                </tr>
+                            </thead>
+                            <tbody class="eventtBody">
+                                <tr>
+                    
+                                    
+                                    
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="addToUser">Add to User</button>
+                        <button type="button" class="delete-rowEvent">Delete Row</button>
+                        
+                        
+                        
+                        
+                        <form>
+                            <input type="text" id="userName" placeholder="Name">
+                            <input type="button" class="add-rowUser" value="Add Row">
+                        </form>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Name</th>
+                                    <!-- copy selected ticket table rows to be a column on the name. -->
+                                </tr>
+                            </thead>
+                            <tbody class= "usertBody">
+                                <tr>
+                    
+                                    
+                                    
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="delete-rowUser">Delete User</button>
 
 
                 </div>
