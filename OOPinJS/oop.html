@@ -53,11 +53,6 @@
     <video autoplay loop id="free" controls preload="true">
         <source src= "final_5d505da53ad91a001468aeb7_85055.mp4" type="video/mp4">
     </video>  
-    
-
-    <div>
-        <button id = "videoButton" onclick= "pause()"> Pause </button>
-    </div>
 
     <div class="container">
         <!-- Trigger the modal with a button -->
@@ -75,7 +70,37 @@
                 </div>
                 <div class="modal-body">
                 <div class="defaultEvents">
-                    <!-- Default events. -->
+                    <!-- Add USER name -->
+                    <form>
+                        <input type="text" id="eventDate" placeholder="Event Date">
+                        <input type="text" id="eventName" placeholder="Event Name">
+                        <input type="text" id="eventDescription" placeholder="Event Description">
+                        <input type="text" id="eventPrice" placeholder = "Event Price">
+                        
+                        <input type="button" class="add-row" value="Add Row">
+                    </form>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Select</th>
+                                <th>Event Date</th>
+                                <th>Event Name</th>
+                                <th>Event Description</th>
+                                <th>Event Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="record"></td>
+                                <!--<td>Peter Parker</td>
+                                <td>peterparker@mail.com</td>-->
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="delete-row">Delete Row</button>
+
+
+
                 </div>
 
                 <div class="userEdits">
