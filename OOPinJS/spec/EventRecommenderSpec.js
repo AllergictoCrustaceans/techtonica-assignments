@@ -1,48 +1,51 @@
 describe("EventRecommender", () => {
-    const EventRecommender = require('../app/EventRecommender');
-    let er;
-  
-    beforeEach(() => {
-      er = new EventRecommender();
-    });
-  
-    describe("addEvent", () => {
-      it("adds a new Event to the system", () => {
-        er.addEvent(event1);
-        expect(er.events.length).toEqual(1);
-        expect(er.events[0].title).toEqual("Change Me"); // what are some other things you can test?
-      });
-    });
-    
-    describe("addUser", () => {
-      it("adds a new User to the system", () => {
-        er.addUser(user1);
-        expect(er.user.length).toEqual(1);
-      });
-    });
-      
-    // describe("saveUserEvent", () => {
-    //   it("adds an event to a user's personal event array", () => {
-    //     er.addEvent("Make a new event");
-    //     er.addUser("Make a new user");
-    //     er.saveUserEvent("event", "user"); // change these to match your method signature
-    //     expect(er.user.personalEvents.length).toEqual(1);
-    //   });
-    // });
-      
-    describe("deleteUser", () => {
-      it("removes a User from the system", () => {
-        er.addUser("Make a new user here that you will delete later");
-        er.deleteUser(user1);
-        expect(er.user.length).toEqual(0);
-      });
-    });
-      
-    describe("deleteEvent", () => {
-      it("removes the event from the system", () => {
-        er.addEvent("A new event that you will delete later");
-        er.deleteEvent(event1);
-        expect(er.events.length).toEqual(0);
-      });
+  const { EventRecommender, Event, User } = require('../oop.js');
+  let er, ev, us;
+
+  beforeEach(() => {
+    er = new EventRecommender();
+    ev = new Event('08/08/2019', 'San Francisco', 'Gladiator', 'Gladiator Film Score', 70);
+    us = new User('Katie');
+  });
+
+  describe("addEvent", () => {
+    it("adds a new Event to the system", () => {
+      er.addEvent(ev);
+      expect(er._events.length).toEqual(1);
+      expect(er._events[0]._eventName).toEqual("Gladiator"); // what are some other things you can test?
     });
   });
+
+  describe("addUser", () => {
+    it("adds a new User to the system", () => {
+      er.addUser(us);
+      expect(er._users.length).toEqual(1);
+    });
+  });
+
+  // describe("saveUserEvent", () => {
+  //   it("adds an event to a user's personal event array", () => {
+  //     er.addEvent("Make a new event");
+  //     er.addUser("Make a new user");
+  //     er.saveUserEvent("event", "user"); // change these to match your method signature
+  //     expect(er.user.personalEvents.length).toEqual(1);
+  //   });
+  // });
+
+  describe("deleteUser", () => {
+    it("removes a User from the system", () => {
+      er.addUser(us);
+      er.deleteUser(us._userName);
+      expect(er._users.length).toEqual(0);
+    });
+  });
+
+  describe("deleteEvent", () => {
+    it("removes the event from the system", () => {
+      const event1 = new Event('08/08/2019', 'San Francisco', 'Gladiator', 'Gladiator Film Score', 70);
+      er.addEvent(ev);
+      er.deleteEvent(ev._eventName);
+      expect(er._events.length).toEqual(0);
+    });
+  });
+});
