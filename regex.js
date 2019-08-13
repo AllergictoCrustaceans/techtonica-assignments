@@ -64,7 +64,7 @@ function array(string) {
     arrayString.push(string);
     console.log(arrayString);
     if(regexString.test(arrayString)) {
-        var stringArrayFinal = arrayString.replace(regexString, '"');
+        var stringArrayFinal = arrayString.replace(regexString, '"'); //doesn't work, BUT, my intent was to replace any whitespace OR commas with a single quote (").
         console.log(stringArrayFinal);
     }
 }
