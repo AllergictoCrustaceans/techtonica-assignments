@@ -115,5 +115,4 @@ eventRecommender.deleteUser('Katie');
 eventRecommender.deleteEvent('Sleep');
 console.log(eventRecommender); 
 
-
 module.exports = EventRecommender;
