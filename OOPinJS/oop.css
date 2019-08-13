@@ -8,6 +8,10 @@ body {
     font-size: 17px;
 }
 
+ul li a {
+    margin: 0 75px;
+}
+
 #free {
     background: #000;
     position: fixed;
@@ -28,15 +32,14 @@ body {
   pointer-events: none;
 }
 
-#videoButton:hover {
-    background: #ddd;
-    color: black;
+#tourDates {
+    float: right;
 }
 
 #disclaimer {
     color: white; 
     font-size: 12px;
-    top: 200px;
+    
 }
 
 .modal-content {
@@ -91,4 +94,9 @@ table th, table td{
    /* display: none; */
    color: white;
    background-color: rgba(0,0,0,0.5);
+}
+
+.filterSearch {
+    display: block;
+    margin: 25px;
 }
