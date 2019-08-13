@@ -38,8 +38,13 @@ ul li a {
 }
 
 #disclaimer {
+    position: absolute;
+    left: 1100px;
     color: white; 
-    font-size: 12px;
+    font-size: 16px;
+    text-align: center;
+    padding: 25px;
+    margin-top: 500px;
     
 }
 
