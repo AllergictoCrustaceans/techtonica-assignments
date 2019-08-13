@@ -66,16 +66,18 @@
             <div class="modal-content">
                 <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 style = "text-align: center;"class="modal-title">Event Dates</h4>
                 </div>
                 <div class="modal-body">
                 <div class="defaultEvents">
-
+                    <h4 style = "text-align: center;"class="modal-title">Event Dates</h4>
 
 
                     <!-- this form should be hidden until a user can authorize their identity--> 
+                    <p id = "eventContentDescription"> Only Hans Zimmer can edit events on his tour.</br>
+                        Oh, you're Hans Zimmer?<br>
+                    Okay, I believe you :) </p>
                     <form>
-                            <input id="searchInput" value="Type To Filter" class="filterSearch">
+                            <!-- <input id="searchInput" value="Type To Filter" class="filterSearch"> -->
                             <input type="text" id="eventDate" placeholder="Event Date">
                             <input type="text" id="eventPlace" placeholder="Event Place">
                             <input type="text" id="eventName" placeholder="Event Name">
@@ -98,28 +100,28 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button type="button" id="addToUser">Add Event to User</button>
                         
                         
                         
                         
                         
                         <!-- this button should be hidden until a user authorizes their identity --> 
+                        <button type="button" id="add-rowEvent">Add Event</button>
                         <button type="button" id="delete-rowEvent">Delete Event</button>
-                        <input type="button" id="add-rowEvent" value="Add Event">
+                        <button type="button" id="addToUser">Add Event to User</button>
                         <!-- this button should be hidden until a user authorizes their identity -->
                         
                         
                         
                         <form>
-                            <input type="text" id="userName" placeholder="Name">
-                            <input type="button" id="add-rowUser" value="Add User">
-                            
+                            <input type="text" id="userName" placeholder="Name">    
+                        </form>
+
                             <!-- this button should be hidden until a user adds a patron onto the list-->
+                            <button type="button" id="add-rowUser">Add User</button>
                             <button type="button" id="delete-rowUser">Delete User</button>
                             <!-- this button should be hidden until a user adds a patron onto the list-->
-                            
-                        </form>
+
                         <table class= "userTable">
                             <thead>
                                 <tr id = "userTr"> 
