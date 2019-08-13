@@ -88,5 +88,11 @@ $(document).ready(function(){
     getSelectedUser.append(clone);
     user1.addUserEvent(event1);
     console.log(user1);
+
+    $(':checked').each(function() {
+        $(this).removeAttr('checked');
+        $('input[name="recordUser"]').prop('checked', false);
+    })
+
     })
 }); 
