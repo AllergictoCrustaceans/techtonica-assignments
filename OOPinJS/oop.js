@@ -1,7 +1,7 @@
 class EventRecommender {
-    constructor(users, event) {    
-    this._events = [];
-    this._users = [];
+    constructor(users, event) {
+        this._events = [];
+        this._users = [];
     }
 
     addEvent(userEvent) {
@@ -26,27 +26,29 @@ class EventRecommender {
 
     deleteUser(userName) {
         var indexUser = '';
-        for(let i = 0; i < this._users.length; i++) {
-            if(this._users[i].userName === userName) {
+        for (let i = 0; i < this._users.length; i++) {
+            if (this._users[i]._userName === userName) {
                 indexUser = i;
                 break;
             }
-        } 
+        }
+
         delete this._users[indexUser];
         this._users.splice(indexUser, 1);
+
         console.log(this.users);
     }
-   
+
     deleteEvent(userEvents) {
         var indexEvent = '';
-        for(let i = 0; i < this._events.length; i++) {
+        for (let i = 0; i < this._events.length; i++) {
             console.log(this._events[i])
-            if(this._events[i]._eventName === userEvents) {
+            if (this._events[i]._eventName === userEvents) {
                 indexEvent = i;
                 break;
             }
-            
-        } 
+
+        }
         delete this._events[indexEvent];
         this._events.splice(indexEvent, 1);
         console.log(this.events);
@@ -54,29 +56,29 @@ class EventRecommender {
 
     filter(type, input) {
         var results = [];
-        if(type === 0) {
-            for(let i = 0; i < this._events.length; i++) {
+        if (type === 0) {
+            for (let i = 0; i < this._events.length; i++) {
                 var filterDate = this._events[i]._eventDate === input;
-                if(filterDate) {
+                if (filterDate) {
                     results.push(this._events[i]);
-    
-                } 
-            }       
-        } 
-        else if(type === 1) {
-            for(let i = 0; i < this._events.length; i++) {
+
+                }
+            }
+        }
+        else if (type === 1) {
+            for (let i = 0; i < this._events.length; i++) {
                 var filterPlace = this._events[i]._eventPlace === input;
-                if(filterPlace) {
+                if (filterPlace) {
                     results.push(this._events[i]);
                 }
             }
-        } 
+        }
         console.log(results);
     }
 }
 
-class User{
-    constructor (userName) {
+class User {
+    constructor(userName) {
         this._userName = userName;
         this._userEvents = [];
     }
@@ -87,7 +89,7 @@ class User{
 }
 
 class Event {
-    constructor (eventDate, eventPlace, eventName, eventDescription, eventPrice) {
+    constructor(eventDate, eventPlace, eventName, eventDescription, eventPrice) {
         this._eventDate = eventDate;
         this._eventPlace = eventPlace;
         this._eventName = eventName;
@@ -111,8 +113,12 @@ eventRecommender.addEvent(event2);
 eventRecommender.filter(0, '08/08/2019');
 eventRecommender.filter(1, 'Austria');
 // eventRecommender.saveUserEvent(user1, [event1, event2]);
-eventRecommender.deleteUser('Katie');
-eventRecommender.deleteEvent('Inception');
-console.log(eventRecommender); 
+// eventRecommender.deleteUser('Katie');
+// eventRecommender.deleteEvent('Inception');
+console.log(eventRecommender);
 
-module.exports = EventRecommender;
+module.exports = {
+    EventRecommender,
+    Event,
+    User
+}
