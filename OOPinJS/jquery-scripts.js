@@ -1,12 +1,3 @@
-//FOR BACKGROUND VIDEO PAUSE
-var free = document.getElementById('free');
-
-
-//default list of tour events within the modal (these cannot be deleted)
-//this has a + and - sign next to the tour events. 
-
-
-
 $(document).ready(function(){
     //build event table from scratch
     function buildEventTable() {
@@ -50,24 +41,27 @@ $(document).ready(function(){
 
 
 
+    function buildUserTable() {
+        $('.usertBody tr').remove();
+      eventRecommender._users.forEach(user => {
+        $('.usertBody').append("<tr><td><input type='checkbox' name='recordEvent'></td><td>" + user._userName + "</td></tr>"); 
+        });
+    }
+
+    buildUserTable();
 
     $("#add-rowUser").click(function(){
         var userName = $("#userName").val();
-        var markupUser = "<tr id='"+userName+"'><td><input type='checkbox' name='recordUser'></td><td>" + userName + "</td></tr>";
-        $(".usertBody").append(markupUser);
+        // var markupUser = "<tr id='"+userName+"'><td><input type='checkbox' name='recordUser'></td><td>" + userName + "</td></tr>";
+        // $(".usertBody").append(markupUser);
         const user1 = new User(userName);
         eventRecommender.addUser(user1);
+
+        buildUserTable();
+
         $('#userName').val('');    
         console.log(eventRecommender);
     });
-
-    
-// //if checkbox selected, show delete user button, and remove tr.
-// $('input[name="recordUser]').each(function() {
-//     if($(this).is(":checked")) {
-//         $('#delete-rowUser"').show();
-//     }
-// });
 
     
     // Find and remove selected table rows
@@ -80,7 +74,6 @@ $(document).ready(function(){
             }
         });
     });
-// });
 
 
 
@@ -90,13 +83,10 @@ $(document).ready(function(){
     $("#userTr").append(markupUserHead);
     var getSelectedEvent = $(".eventTable input:checked").parents('tr');
     var getTr = getSelectedEvent.children();
+    var clone = getTr.clone();
     var getSelectedUser = $('.userTable input:checked').parents('tr');
-    getSelectedUser.append(getTr);
-    console.log('anything');
+    getSelectedUser.append(clone);
     user1.addUserEvent(event1);
     console.log(user1);
-    // $('input[name="recordEvent]').prop('checked', false);
-        //does it add selected event to specific user.
     })
-
 }); 
