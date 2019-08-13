@@ -56,7 +56,7 @@
 
     <div class="container">
         <!-- Trigger the modal with a button -->
-        <button type="button" id= "tourDates" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Tour Dates</button>
+        <button type="button" id= "tourDates" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Order Tickets </button>
         
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -80,14 +80,8 @@
                             <input type="text" id="eventPlace" placeholder="Event Place">
                             <input type="text" id="eventName" placeholder="Event Name">
                             <input type="text" id="eventDescription" placeholder="Event Description">
-                            <input type="text" id="eventPrice" placeholder = "Event Price">
-                            
-                            <input type="button" id="add-rowEvent" value="Add Row">
-                        </form>
-                        <!-- this form should be hidden until a user can authorize their identity-->
-                        
-                        
-                        
+                            <input type="text" id="eventPrice" placeholder = "Event Price">  
+                    </form>
                         <table class = "eventTable">
                             <thead>
                                 <tr>
@@ -104,21 +98,22 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <button type="button" id="addToUser">Add to User</button>
+                        <button type="button" id="addToUser">Add Event to User</button>
                         
                         
                         
                         
                         
                         <!-- this button should be hidden until a user authorizes their identity --> 
-                        <button type="button" id="delete-rowEvent">Delete Row</button>
+                        <button type="button" id="delete-rowEvent">Delete Event</button>
+                        <input type="button" id="add-rowEvent" value="Add Event">
                         <!-- this button should be hidden until a user authorizes their identity -->
                         
                         
                         
                         <form>
                             <input type="text" id="userName" placeholder="Name">
-                            <input type="button" id="add-rowUser" value="Add Row">
+                            <input type="button" id="add-rowUser" value="Add User">
                             
                             <!-- this button should be hidden until a user adds a patron onto the list-->
                             <button type="button" id="delete-rowUser">Delete User</button>
