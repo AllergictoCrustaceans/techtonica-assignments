@@ -21,14 +21,14 @@ describe("EventRecommender", () => {
       });
     });
       
-    describe("saveUserEvent", () => {
-      it("adds an event to a user's personal event array", () => {
-        er.addEvent("Make a new event");
-        er.addUser("Make a new user");
-        er.saveUserEvent("event", "user"); // change these to match your method signature
-        expect(er.user.personalEvents.length).toEqual(1);
-      });
-    });
+    // describe("saveUserEvent", () => {
+    //   it("adds an event to a user's personal event array", () => {
+    //     er.addEvent("Make a new event");
+    //     er.addUser("Make a new user");
+    //     er.saveUserEvent("event", "user"); // change these to match your method signature
+    //     expect(er.user.personalEvents.length).toEqual(1);
+    //   });
+    // });
       
     describe("deleteUser", () => {
       it("removes a User from the system", () => {
