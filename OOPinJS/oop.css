@@ -34,6 +34,7 @@ ul li a {
 
 #tourDates {
     float: right;
+    margin: 300px 500px;
 }
 
 #disclaimer {
@@ -45,6 +46,7 @@ ul li a {
 .modal-content {
     background-color:rgba(0,0,0,0.5);
     color: white;
+
 }
 
 form{
@@ -65,6 +67,13 @@ table th, table td{
     padding: 10px;
     text-align: left;
 }
+
+input {
+    background-color: rgba(0,0,0,0.5);
+    color: white; 
+    margin: 15px;
+}
+
 #add-rowEvent {
     display: inline-block;
     margin: 25px;
