@@ -44,7 +44,7 @@ $(document).ready(function(){
     function buildUserTable() {
         $('.usertBody tr').remove();
       eventRecommender._users.forEach(user => {
-        $('.usertBody').append("<tr><td><input type='checkbox' name='recordEvent'></td><td>" + user._userName + "</td></tr>"); 
+        $('.usertBody').append("<tr><td><input type='checkbox' name='recordUser'></td><td>" + user._userName + "</td></tr>"); 
         });
     }
 
@@ -66,10 +66,13 @@ $(document).ready(function(){
     
     // Find and remove selected table rows
     $("#delete-rowUser").click(function(){
-        $("table tbody").find('input[name="recordUser"]').each(function(){
+        // $("table tbody .usertBody").find('input[name="recordUser"]').each(function(){
+        $('input[name="recordUser"]').each(function(){
             if($(this).is(":checked")){
+                var deleteUser = $(this).parent().siblings().last().text();
+                console.log('deleteUser = ', deleteUser);
+                eventRecommender.deleteUser(deleteUser);
                 $(this).parents("tr").remove();
-                eventRecommender.deleteUser(user1);
                 console.log(eventRecommender);
             }
         });
