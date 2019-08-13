@@ -112,7 +112,7 @@ eventRecommender.filter(0, '08/08/2019');
 eventRecommender.filter(1, 'Austria');
 // eventRecommender.saveUserEvent(user1, [event1, event2]);
 eventRecommender.deleteUser('Katie');
-eventRecommender.deleteEvent('Sleep');
+eventRecommender.deleteEvent('Inception');
 console.log(eventRecommender); 
 
 module.exports = EventRecommender;
