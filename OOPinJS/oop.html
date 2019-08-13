@@ -50,13 +50,13 @@
     </header>
     <!--Main Navigation-->
 
-    <video autoplay loop id="free" controls preload="true">
+    <video autoplay loop muted id="free" controls preload="true">
         <source src= "final_5d505da53ad91a001468aeb7_85055.mp4" type="video/mp4">
     </video>  
 
     <div class="container">
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Tour Dates</button>
+        <button type="button" id= "tourDates" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Tour Dates</button>
         
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -75,7 +75,7 @@
 
                     <!-- this form should be hidden until a user can authorize their identity--> 
                     <form>
-                            <input id="searchInput" value="Type To Filter">
+                            <input id="searchInput" value="Type To Filter" class="filterSearch">
                             <input type="text" id="eventDate" placeholder="Event Date">
                             <input type="text" id="eventPlace" placeholder="Event Place">
                             <input type="text" id="eventName" placeholder="Event Name">
@@ -127,7 +127,7 @@
                         </form>
                         <table class= "userTable">
                             <thead>
-                                <tr>
+                                <tr id = "userTr"> 
                                     <th>Select</th>
                                     <th>Name</th>
                                     <!-- copy selected ticket table rows to be a column on the name. -->
@@ -158,9 +158,9 @@
      </div>
 
     <!-- Make this appear at the footer -->
-    <div class="disclaimer">
-            <p>Original video posted by<a href = "https://www.youtube.com/watch?v=Y1UiD2sxoWo"> Jiří </a>. <br>
-                Video trimmed with Kapwing.</p>
+    <div>
+        <p id = "disclaimer">Original video posted by<a href = "https://www.youtube.com/watch?v=Y1UiD2sxoWo"> Jiří </a>. <br>
+            Video trimmed with Kapwing.</p>
     </div>
 
 
