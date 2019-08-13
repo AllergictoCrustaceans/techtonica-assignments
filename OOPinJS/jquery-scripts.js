@@ -17,7 +17,6 @@ $(document).ready(function(){
     }
     
 
-
     buildEventTable();
 
     $("#add-rowEvent").click(function(){
