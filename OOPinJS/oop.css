@@ -51,7 +51,15 @@ ul li a {
 .modal-content {
     background-color:rgba(0,0,0,0.5);
     color: white;
+    height: 50%;
+}
 
+#eventContentDescription {
+    font-size: 12px;
+    max-width: auto;
+    max-height: auto; 
+    text-align: center;
+    
 }
 
 form{
@@ -81,30 +89,30 @@ input {
 
 #add-rowEvent {
     display: inline-block;
-    margin: 25px;
+    margin: 15px;
     color: white;
     background-color: rgba(0,0,0,0.5);
 }
 #delete-rowEvent {
     display: inline-block;
-    margin: 25px;
+    margin: 15px;
     color: white;
     background-color: rgba(0,0,0,0.5);
 }
 #addToUser {
     display: inline-block;
-    margin: 25px;
+    margin: 15px;
     color: white;
     background-color: rgba(0,0,0,0.5);
 }
 #add-rowUser {
     display: inline-block;
-    margin: 25px;
+    margin: 15px;
     color: white;
     background-color: rgba(0,0,0,0.5);
 }
 #delete-rowUser {
-   margin: 25px;
+   margin: 15px;
    /* display: none; */
    color: white;
    background-color: rgba(0,0,0,0.5);
