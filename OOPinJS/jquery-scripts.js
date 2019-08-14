@@ -52,8 +52,6 @@ $(document).ready(function(){
 
     $("#add-rowUser").click(function(){
         var userName = $("#userName").val();
-        // var markupUser = "<tr id='"+userName+"'><td><input type='checkbox' name='recordUser'></td><td>" + userName + "</td></tr>";
-        // $(".usertBody").append(markupUser);
         const user1 = new User(userName);
         eventRecommender.addUser(user1);
 
@@ -95,7 +93,9 @@ $(document).ready(function(){
     $(':checked').each(function() {
         $(this).removeAttr('checked');
         $('input[name="recordUser"]').prop('checked', false);
+        $('input[name="recordEvent"]').prop('checked', false);
+    })
     })
 
-    })
+
 }); 
