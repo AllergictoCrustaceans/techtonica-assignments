@@ -87,20 +87,20 @@ class User {
         this._userEvents.push(event);
     }
 
-    deleteEventFromUser(userEvents) {
-        var indexEventFromUser = '';
-        for (let i = 0; i < this._userEvents.length; i++) {
-            console.log(this._userEvents[i])
-            if (this._userEvents[i] === userEvents) {
-                indexEventFromUser = i;
-                break;
-            }
+    // deleteEventFromUser(userEvents) {
+    //     var indexEventFromUser = '';
+    //     for (let i = 0; i < this._userEvents.length; i++) {
+    //         console.log(this._userEvents[i])
+    //         if (this._userEvents[i] === userEvents) {
+    //             indexEventFromUser = i;
+    //             break;
+    //         }
 
-        }
-        delete this._userEvents[indexEventFromUser];
-        this._events.splice(indexEventFromUser, 1);
-        console.log(this._userEvents);
-    }
+    //     }
+    //     delete this._userEvents[indexEventFromUser];
+    //     this._events.splice(indexEventFromUser, 1);
+    //     console.log(this._userEvents);
+    // }
 }
 
 class Event {
