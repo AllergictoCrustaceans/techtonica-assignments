@@ -64,7 +64,6 @@ $(document).ready(function(){
     
     // Find and remove selected table rows
     $("#delete-rowUser").click(function(){
-        // $("table tbody .usertBody").find('input[name="recordUser"]').each(function(){
         $('input[name="recordUser"]').each(function(){
             if($(this).is(":checked")){
                 var deleteUser = $(this).parent().siblings().last().text();
@@ -90,12 +89,24 @@ $(document).ready(function(){
     user1.addUserEvent(event1);
     console.log(user1);
 
-    $(':checked').each(function() {
-        $(this).removeAttr('checked');
-        $('input[name="recordUser"]').prop('checked', false);
-        $('input[name="recordEvent"]').prop('checked', false);
-    })
+        $(':checked').each(function() {
+            $(this).removeAttr('checked');
+            $('input[name="recordUser"]').prop('checked', false);
+            $('input[name="recordEvent"]').prop('checked', false);
+        })
     })
 
+    $('#deleteEventFromUser').click(function() {
+        $('input[name="recordEvent"]').each(function(){
+            if($(this).is(":checked")){
+                var getSelectedEvent_user = $('.userTable input:checked').parents('tr');
+                console.log('getSelectedEvent_user = ', getSelectedEvent_user);
+                eventRecommender.deleteUser(getSelectedEvent_user);
+                $(this).parents("tr").remove();
+                //remove EventsAdded header
+                console.log(eventRecommender);
+            }
+        });
 
+    })
 }); 
