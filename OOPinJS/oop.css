@@ -117,6 +117,13 @@ input {
    background-color: rgba(0,0,0,0.5);
 }
 
+#deleteEventFromUser {
+    margin: 15px;
+    display: inline-block;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+ }
+
 .filterSearch {
     display: block;
     margin: 25px;
