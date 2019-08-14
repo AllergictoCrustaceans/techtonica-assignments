@@ -86,6 +86,21 @@ class User {
     addUserEvent(event) {
         this._userEvents.push(event);
     }
+
+    deleteEventFromUser(userEvents) {
+        var indexEventFromUser = '';
+        for (let i = 0; i < this._userEvents.length; i++) {
+            console.log(this._userEvents[i])
+            if (this._userEvents[i] === userEvents) {
+                indexEventFromUser = i;
+                break;
+            }
+
+        }
+        delete this._userEvents[indexEventFromUser];
+        this._events.splice(indexEventFromUser, 1);
+        console.log(this._userEvents);
+    }
 }
 
 class Event {
@@ -98,20 +113,24 @@ class Event {
     }
 }
 
-const event1 = new Event('08/08/2019', 'San Francisco', 'Gladiator', 'Gladiator Film Score', 70);
-const event2 = new Event('08/09/2019', 'Austria', 'Inception', 'Inception Film Score', 70);
+const event1 = new Event('08/08/2019', 'San Francisco, USA', 'Gladiator', 'Confidential', 70);
+const event2 = new Event('08/15/2019', 'Salzburg, AUT ', 'Inception', 'Confidential', 70);
+const event3 = new Event('08/20/2019', 'Copenhagen, DE', 'The Lion King', 'Confidential ', 180);
+const event5 = new Event('08/25/2019', 'Queenstown, NZ', 'The Dark Knight', 'Confidential', 200);
+const event4 = new Event('08/29/2019', 'Canterbury, UK', 'Dunkirk', 'Free Concert', 0);
 
-const user1 = new User('Katie');
-const user2 = new User('Wu');
-user2.addUserEvent(event1);
+const user1 = new User('Ramin Djawadi');
+user1.addUserEvent(event1);
 
 const eventRecommender = new EventRecommender();
 eventRecommender.addUser(user1);
-eventRecommender.addUser(user2);
 eventRecommender.addEvent(event1);
 eventRecommender.addEvent(event2);
+eventRecommender.addEvent(event3);
+eventRecommender.addEvent(event4);
+eventRecommender.addEvent(event5);
 eventRecommender.filter(0, '08/08/2019');
-eventRecommender.filter(1, 'Austria');
+eventRecommender.filter(1, 'Copenhagen, DE');
 // eventRecommender.saveUserEvent(user1, [event1, event2]);
 // eventRecommender.deleteUser('Katie');
 // eventRecommender.deleteEvent('Inception');
