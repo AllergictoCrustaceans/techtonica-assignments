@@ -4,7 +4,7 @@ describe("EventRecommender", () => {
 
   beforeEach(() => {
     er = new EventRecommender();
-    ev = new Event('08/08/2019', 'San Francisco', 'Gladiator', 'Gladiator Film Score', 70);
+    ev = new Event('08/08/2019', 'San Francisco, USA', 'Gladiator', 'Gladiator Film Score', 70);
     us = new User('Katie');
   });
 
@@ -48,4 +48,19 @@ describe("EventRecommender", () => {
       expect(er._events.length).toEqual(0);
     });
   });
+
+  // describe("addEventToUser", () => {
+  //   it("add events to the userTable", () => {
+  //     er.addUserEvent(ev._eventName);
+  //   })
+  // })
+
+  // describe('deleteEventFromUser', () => {
+  //   it("remove the event from the userTable", () => {
+  //     er.addUserEvent(ev);
+  //     er.deleteEventFromUser(ev._eventName);
+  //     er
+  //   })
+  // })
+
 });
