@@ -56,7 +56,7 @@
 
     <div class="container">
         <!-- Trigger the modal with a button -->
-        <button type="button" id= "tourDates" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Order Tickets </button>
+        <button type="button" id= "tourDates" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Welcome, Hans Zimmer</button>
         
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -69,13 +69,12 @@
                 </div>
                 <div class="modal-body">
                 <div class="defaultEvents">
-                    <h4 style = "text-align: center;"class="modal-title">Event Dates</h4>
+                    <h4 style = "text-align: center;"class="modal-title">Exclusive Concert for my Friends</h4>
 
 
                     <!-- this form should be hidden until a user can authorize their identity--> 
-                    <p id = "eventContentDescription"> Only Hans Zimmer can edit events on his tour.</br>
-                        Oh, you're Hans Zimmer?<br>
-                    Okay, I believe you :) </p>
+                    <p id = "eventContentDescription"> Add attendees on the left. <br>
+                    Add tour dates on the right.</p>
                     <form>
                             <!-- <input id="searchInput" value="Type To Filter" class="filterSearch"> -->
                             <input type="text" id="eventDate" placeholder="Event Date">
@@ -108,7 +107,7 @@
                         <!-- this button should be hidden until a user authorizes their identity --> 
                         <button type="button" id="add-rowEvent">Add Event</button>
                         <button type="button" id="delete-rowEvent">Delete Event</button>
-                        <button type="button" id="addToUser">Add Event to User</button>
+                        <button type="button" id="addToUser">Add Event to Attendee</button>
                         <!-- this button should be hidden until a user authorizes their identity -->
                         
                         
@@ -118,8 +117,9 @@
                         </form>
 
                             <!-- this button should be hidden until a user adds a patron onto the list-->
-                            <button type="button" id="add-rowUser">Add User</button>
-                            <button type="button" id="delete-rowUser">Delete User</button>
+                            <button type="button" id="add-rowUser">Add Attendee</button>
+                            <button type="button" id="delete-rowUser">Delete Attendee</button>
+                            <button type="button" id="deleteEventFromUser">Delete Event From User</button>
                             <!-- this button should be hidden until a user adds a patron onto the list-->
 
                         <table class= "userTable">
