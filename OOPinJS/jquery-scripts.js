@@ -96,17 +96,16 @@ $(document).ready(function(){
         })
     })
 
-    $('#deleteEventFromUser').click(function() {
-        $('input[name="recordEvent"]').each(function(){
-            if($(this).is(":checked")){
-                var getSelectedEvent_user = $('.userTable input:checked').parents('tr');
-                console.log('getSelectedEvent_user = ', getSelectedEvent_user);
-                eventRecommender.deleteUser(getSelectedEvent_user);
-                $(this).parents("tr").remove();
-                //remove EventsAdded header
-                console.log(eventRecommender);
-            }
-        });
-
-    })
+    // $('#deleteEventFromUser').click(function() {
+    //     $('input[name="recordEvent"]').each(function(){
+    //         if($(this).is(":checked")){
+    //             var getSelectedEvent_user = $('.userTable input:checked').parents('tr');
+    //             console.log('getSelectedEvent_user = ', getSelectedEvent_user);
+    //             eventRecommender.deleteUser(getSelectedEvent_user);
+    //             $(this).parents("tr").remove();
+    //             //remove EventsAdded header
+    //             console.log(eventRecommender);
+    //         }
+    //     });
+    // })
 }); 
