@@ -1,3 +1,9 @@
+//FROM EXPRESS INDEPENDENT PRACTICE
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+
+//FROM NODE PART 1 AND 2 INDEPENDENT PRACTICE
 const http = require('http');
 const fs = require('fs');
 const hostname = '127.0.0.1';
