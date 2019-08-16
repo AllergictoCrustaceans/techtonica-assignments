@@ -1,10 +1,17 @@
-Disclaimer:  I do not own the content of the background video on this GitHub repo. I am using 2 minutes and 18 seconds of video from YouTuber Jiri in fair use to showcase my Object-Oriented Programming (OOP) webpage project. 
+DISLCLAIMER:  I do not own the content of the background video on this GitHub repo. I am using 2 minutes and 18 seconds of video from YouTuber Jiri in fair use to showcase my Object-Oriented Programming (OOP) webpage project. 
 
 Built and tested with: jQuery, Bootstrap, Jasmine.js
 
-Below are gifs showcasing the functionalities of my OOP project. 
+Bugs that need fixing: 
+- Clear radial buttons after "Add Event to User" button click.
+- Remove "Events Added" under the User Table when no user has events added.  
 
-Features include: 
+
+Future Features: 
+- Search bar to filter through Events and Users
+
+Below are gifs showcasing the functionalities of my OOP project. 
+Current features include: 
 
 - Adding Users to the Users’ List
 ![](AddUser.gif)
