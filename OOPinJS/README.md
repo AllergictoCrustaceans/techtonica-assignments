@@ -8,7 +8,7 @@ Features include:
 
 
 - Adding Events to the Events List
-![](AddEvent.gif)
+![Add Event Demo](Downloads/AddEvent.gif)
 <video width="320" height="240" controls>
   <source src="AddEvent.mov" type="video/mp4">
 </video>
