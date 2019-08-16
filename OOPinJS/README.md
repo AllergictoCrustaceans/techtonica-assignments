@@ -1,4 +1,4 @@
-DISLCLAIMER:  I do not own the content of the background video on this GitHub repo. I am using 2 minutes and 18 seconds of video from YouTuber Jiri in fair use to showcase my Object-Oriented Programming (OOP) webpage project. 
+DISLCLAIMER:  I do not own the content of the background video on this GitHub repo. I am using 2 minutes and 18 seconds of video from [YouTuber Jiri](https://www.youtube.com/watch?v=Y1UiD2sxoWo) in fair use to showcase my Object-Oriented Programming (OOP) webpage project. 
 
 Built and tested with: jQuery, Bootstrap, Jasmine.js
 
