@@ -1,0 +1,27 @@
+<!-- basic ajax exercise. Used ADAM MORGAN's article as refernence: https://atom-morgan.github.io/ajax/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokemon API Exercise</title>
+    <meta charset="utf-8">
+    <script src="pokemonAjax.js"></script>
+  </head>
+
+  <body>
+    <form id="pokemonIndex">
+      <p>Name of Pokemon you wanna check: </p>
+      <input type="text" name="pokemon">
+
+      <p>Pokemon Description:</p>
+      <textarea name="description" rows="10" cols="30"></textarea>
+
+      <br>
+      <button type="submit">Add to Pokemon Index</button>
+    </form>
+
+    <h2>Pokemon:</h2>
+
+    <div id="pokemon-list"></div>
+  </body>
+</html>
