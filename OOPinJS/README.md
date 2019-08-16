@@ -14,7 +14,7 @@ Below are gifs showcasing the functionalities of my OOP project.
 Current features include: 
 
 - Adding Users to the Users’ List
-![](AddUser.gif)
+![](AddUser.gif) 
 
 
 - Adding Events to the Events List
