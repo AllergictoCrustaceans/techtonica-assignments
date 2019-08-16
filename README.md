@@ -31,4 +31,9 @@ The following order of assignment submissions is as follows:
 
 14.) OOPinJS
 
+15.) PokeAPI
+
+16.) techtonica-labs/getting-started-with-node
+
+
 More to come...
