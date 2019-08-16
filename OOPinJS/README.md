@@ -6,12 +6,13 @@ Below are gifs showcasing the functionalities of my OOP project.
 
 Features include: 
 
+- Adding Users to the Users’ List
+![](AddUser.gif)
+
 
 - Adding Events to the Events List
 ![](AddEvent.gif)
 
-- Adding Users to the Users’ List
-![](AddUser.gif)
 
 - Adding Events to the Users’ List
 ![](AddEventToUser.gif)
