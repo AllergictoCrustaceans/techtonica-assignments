@@ -1,7 +1,9 @@
 DISLCLAIMER:  I do not own the content of the background video on this GitHub repo. I am using 2 minutes and 18 seconds of video from [YouTuber Jiří](https://www.youtube.com/watch?v=Y1UiD2sxoWo) in fair use to showcase my Object-Oriented Programming (OOP) webpage project. 
 
 Live Deployment of Project: https://kwuoop.netlify.com/
-WARNING: Please let the page load for 1 minute or 2 for the audio of the background video to be audible. I'm sorry. It's just a huge file. 
+
+WARNING: If you're browser is automatically set to disable audio for pages, please enable. 
+Please let the page load for 1 minute or 2 for the audio of the background video to be audible. I'm sorry. It's just a huge file. 
 
 
 Built and tested with: jQuery, Bootstrap, Jasmine.js
