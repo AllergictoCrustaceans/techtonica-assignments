@@ -29,10 +29,12 @@ The following order of assignment submissions is as follows:
 
 13.) techtonica-projects/jquery-play 
 
-14.) OOPinJS
+14.) miniOOP
 
-15.) PokeAPI
+15.) OOPinJS
 
-16.) techtonica-labs/getting-started-with-node
+16.) PokeAPI
+
+17.) techtonica-labs/getting-started-with-node
 
 More to come...
