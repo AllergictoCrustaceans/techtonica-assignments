@@ -2,6 +2,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const expressValidator = require('express-validator');
+const mongojs = require('mongojs');
+const db = mongojs('getting-started-with-node', ['users']);
+const ObjectId = mongojs.ObjectId;
 
 const app = express();
 
@@ -26,44 +30,65 @@ app.use(bodyParser.urlencoded({extended: false}));
 //SET STATIC PATH 
 app.use(express.static(path.join(__dirname, 'public'))); // might need to make a directory called public
 
-var users = [
-    {
-        id: 1,
-        first_name: 'John',
-        last_name: 'Doe',
-        email: 'johndoe@gmail.com',
-    },
-    {
-        id: 2,
-        first_name: 'Bob',
-        last_name: 'Smith',
-        email: 'bobsmith@gmail.com',
-    },
-    {
-        id: 3,
-        first_name: 'Jill',
-        last_name: 'Jackson',
-        email: 'jjackson@gmail.com',
-    }
+//GLOBAL VARS
+app.use(function(req, res, next) {
+    res.locals.errors = null;
+    next();
+});
 
-]
-
+//EXPRESS VALIDATOR MIDDLEWARE
+app.use(express.json());
 
 app.get('/', function(req, res) {
-    res.render('index', {
-        title: 'Customers',
-        users: users
+
+    db.users.find(function(err, docs) {
+        res.render('index', {
+            title: 'Customers',
+            users: docs
+        });
     });
 });
 
 app.post('/users/add', function(req, res) {
-    var newUser = {
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email
+
+    req.checkBody('first_name', 'First Name is Required').notEmpty();
+    req.checkBody('last_name', ' Last Name is Required').notEmpty();
+    req.checkBody('email', 'Email is Required').notEmpty();
+
+    var errors = req.validationErrors();
+
+    if(errors) {
+        res.render('index', {
+            title: 'Customers',
+            users: users,
+            errors: errors
+        });
+    } else {
+        var newUser = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email
+        }
+        db.users.insert(newUser, function(err, result) {
+            if(err) {
+                console.log(err);
+            } 
+            res.redirect('/');
+        });
     }
+
     console.log(newUser);
 });
+
+app.delete('/users/delete/:id', function(req, res) {
+    db.users.remove({_id: ObjectId(req.params.id)}, function(err) {
+        if(err) {
+            console.log(err);
+        } 
+        res.redirect('/');
+    })
+});
+
 
 app.listen(3000, function() {
     console.log('Server started on port 3000...');
