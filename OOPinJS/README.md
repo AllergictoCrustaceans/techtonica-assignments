@@ -3,8 +3,7 @@ DISLCLAIMER:  I do not own the content of the background video on this GitHub re
 Live Deployment of Project: https://kwuoop.netlify.com/
 
 WARNING: If your browser is automatically set to disable audio for pages, please enable. 
-The background video may not play immediately due to its huge file. But-- if you want to get the full experience, please let the page load for 1 or 2 minutes. 
-
+The background video may not play immediately due to its huge file. But-- if you want to get the full experience, please let the page load for 1 minute, then refresh the page.
 
 Built and tested with: jQuery, Bootstrap, Jasmine.js
 
