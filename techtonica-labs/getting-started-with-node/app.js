@@ -6,7 +6,7 @@ const expressValidator = require('express-validator');
 const mongojs = require('mongojs');
 const db = mongojs('getting-started-with-node', ['users']);
 const ObjectId = mongojs.ObjectId;
-
+const { I_LOVE } = require('./config');
 const app = express();
 
 // var logger = function(req, res, next) {
