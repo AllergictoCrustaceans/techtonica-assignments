@@ -4,7 +4,11 @@ const exphbs = require('express-handlebars');
 const logger = require('./middleware/logger');
 const members = require('./Members');
 
+const {I_LOVE} = require('./views/config');
+
 const app = express();
+
+console.log('I love', I_LOVE);
 
 //INIT Middleware
 // app.use(logger);
