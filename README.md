@@ -37,4 +37,6 @@ The following order of assignment submissions is as follows:
 
 17.) techtonica-labs/getting-started-with-node
 
+18.) techtonica-labs/express-tutorial
+
 More to come...
