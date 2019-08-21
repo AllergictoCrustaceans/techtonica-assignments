@@ -38,10 +38,19 @@
                 - Ingredients (text)
 
         Q4: What are the relationships between the entities? 
-        A4: One (Chefs) to Many (Recipes)
+        A4: One (Chefs) to Many (Recipes) Relationship
 
         Q5:  Database Model 
-        A5: 
+        A5: (Click on the link below to see the diagram)
+-->
+        <a href= "chefAndRecipe.pdf">Chef and Recipe Database Model</a>
+
+<!--
+        Q6: Is this table normalized?  
+        A6: This table is normalized, since every cell contains a unique value, and not a repeat of contents from other tables. 
+
+        Q7: Other ways to model this data?
+        A7: Being honest, I can't think of another way for now. 
 -->
 
 <!--
@@ -49,24 +58,30 @@
         Website of Choice: Youtube.com
         User Flow: Subscribe Button
         Data required: 
-            Subscriber:
-                - User ID (integer)
-                - Youtube Name (text)
-                - Subscribed to (text)
-                - Number of Subscriptions (integer)
-                - List of Subscribers (text)
-                - Number of Subscribers (integer)
+            Subscription:
+                - Subscription ID (integer)
+                - Subscription Date (text)
         
             Youtuber:
                 - User ID (integer)
                 - Youtube Name (text)
-                - Subscribed to (text)
-                - Number of Subscriptions (integer)
-                - List of Subscribers (text)
-                - Number of Subscribers (text)
 
-        One to One Relationship (one account subscribe to one account only)
+        Many to Many Relationship:
+        A Youtuber may have one or more subscriptions on their list.
+        A subscription can appear in one or many Youtuber's list.
+
+        Database Model
+        (click on the link below to see the diagram)
+-->
+        <a href= "youtubeSubscribers.pdf">Youtube Subscription Database Model</a>
 
 
+<!--
+    Exercise 3:
+        1.) Foreign key links two tables together by referring to the primary key of another table. 
+        2.) Database relationships: 
+            A.) One to one relationship: When one record in a table can only be associated to one record in another table. 
+            B.) One to many relationship: When one record in a table can be associated to many records in another table. 
+            C.) Many to many relationship: When many records in a table can be associated to many records in another table. 
 
 -->
