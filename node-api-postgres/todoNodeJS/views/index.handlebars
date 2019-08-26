@@ -1,0 +1,23 @@
+<h1 class="text-center mb-3">{{title}}</h1>
+<form action="/api/articles" method="POST" class="mb-4">
+  <div class="form-group">
+    <label for="articleTitle">Article Title</label>
+    <input type="text" name="articleTitle" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="post">Post</label>
+    <input type="post" name="post" class="form-control">
+  </div>
+  <input type="submit" value="Add Article" class="btn btn-primary btn-block">
+</form>
+<h4>Articles</h4>
+<ul class="list-group">
+  {{#each post}}
+    <li class="list-group-item">{{this.articleTitle}}: {{this.post}}</li>
+      {{#each this.comment}}
+        <ul><li>{{this}}</li></ul>
+      {{/each}}
+  {{/each}}
+</ul>
+
+<a href="/api/articles" class="btn btn-light mt-4">Visit API</a>
