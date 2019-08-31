@@ -13,15 +13,22 @@ const app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+//Set static folder
+app.use(express.static(path.join(__dirname, 'public')))
+
 //Test DB
 db.authenticate()
     .then(() => console.log('Database connected...'))
     .catch(err => console.log('Error:' + err));
 
-const PORT = process.env.PORT || 5432;
+const PORT = process.env.PORT || 5000;
 
+
+//Index route
 app.get('/', (req, res) => {
-    res.send('INDEX');
+    res.render('index', {
+        layout: 'landing'
+    });
 });
 
 //Gig routes
