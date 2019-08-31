@@ -13,6 +13,10 @@ const app = express();
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+
+//Body Parse
+app.use(bodyParser.urlencoded({extended:false}))
+
 //Set static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -22,7 +26,6 @@ db.authenticate()
     .catch(err => console.log('Error:' + err));
 
 const PORT = process.env.PORT || 5000;
-
 
 //Index route
 app.get('/', (req, res) => {
