@@ -2,15 +2,15 @@ const express = require('express');
 const router = express.Router();
 const db = require('../config/database');
 const Gig = require('../models/Gig');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 //Get gig list
 router.get('/', (req, res) => {
     Gig.findAll()
-        .then(gigs => {
-            res.render('gigs', {
-                gigs
-            });
-        })
+        .then(gigs => res.render('gigs', {
+            gigs
+            }))
         .catch(err => console.log(err));
 })
 
@@ -22,26 +22,68 @@ router.get('/add', (req, res) => {
 
 //Add a gig
 router.post('/add', (req, res) => {
-    const data = {
-        title: 'Looking for a React developer',
-        technologies: 'react,javascript,html,css',
-        budget: '$3000',
-        description: 'Unlike recruiters, we look for at portfolios, not years of experience',
-        contact_email: 'user1@gmail.com'
+    let {title, technologies, budget, description, contact_email} = req.body;
+    let errors = [];
+
+    //Validate Fields
+    if(!title){
+        errors.push({text: "Please add a title"});
+    }
+    if(!technologies){
+        errors.push({text: "Please add some technologies."});
+    }
+    if(!description){
+        errors.push({text: "Please add a description"});
+    }
+    if(!contact_email){
+        errors.push({text: "Please add a contact email"});
     }
 
-    let {title, technologies, budget, description, contact_email} = data;
+    //Check for errors
+    if(errors.length > 0) {
+        res.render('add', {
+            errors, 
+            title, 
+            technologies, 
+            budget, 
+            description, 
+            contact_email
+        })
+    } else {
 
-    //Insert into table
-    Gig.create({
-        title,
-        technologies,
-        description,
-        budget,
-        contact_email
-    })
-        .then(gig => res.redirect('/gigs'))
-        .catch(err => console.log(err));
+        if(!budget) {
+            budget = 'Unknown';
+        } else {
+            budget = `$${budget}`;
+        }
+
+        //Make lower case and remove space after comma
+        technologies = technologies.toLowerCase().replace(/, /g, ',');
+
+        //Insert into table
+        Gig.create({
+            title,
+            technologies,
+            description,
+            budget,
+            contact_email
+        })
+            .then(gig => res.redirect('/gigs'))
+            .catch(err => console.log(err));
+    }
+})
+
+//search for gigs
+router.get('/search', (req, res) => {
+    let {term} = req.query;
+    
+    //Make lower case
+    term = term.toLowerCase();
+
+    //call find all
+    Gig.findAll({where: {technologies: { [Op.like]: '%' + term + '%'}}})
+    .then(gigs => res.render('gigs', { gigs}))
+    .catch(err => console.log(err));
 })
 
 module.exports = router;
