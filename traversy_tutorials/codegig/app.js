@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
 });
 
 //Gig routes
-app.use('/gigs', require('./router/gigs'));
+app.use('/gigs', require('../routes/gigs'));
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
