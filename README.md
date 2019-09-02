@@ -43,4 +43,6 @@ The following order of assignment submissions is as follows:
 
 20.) dbMigration.png
 
+21.) eventonica-CLI
+
 More to come...
