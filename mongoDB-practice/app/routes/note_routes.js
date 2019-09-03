@@ -5,7 +5,7 @@ module.exports = function(app, db) {
     app.get('/notes/:id', (req, res) => {
         const id = req.params.id;
         const details = {
-            '_id': new ObjectID(id);
+            '_id': new ObjectID(id)
         };
         db.collection('notes').findOne(details, (err, item) => {
             if(err) {
