@@ -1,6 +1,5 @@
 const express = require('express');
-const MongoClient = require('mongodb').MongoClient
-const assert = require('assert');
+const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 const db = require('./config/db');
 
@@ -13,14 +12,18 @@ const PORT = 8000;
 app.use(bodyParser.urlencoded({extended:true}));
 
 
-//MongoClient connection to my DB
-MongoClient.connect("mongodb://localhost:8000/notes", { useNewUrlParser: true }); //WTF
 
-const database = db('note-api')
+//MongoClient connection to my DB
+var url = 'mongodb://localhost:8000/notes';
+
+MongoClient.connect(url, function(err, db) {
+    console.log("connected");
+    db.close();
+}); 
 
 //import routes folder  
-require('./app/routes')(app, {database});
+require('./app/routes')(app, {});
+
+
 //listen port
-app.listen(PORT, () => {  
-    console.log(`Server started on ${PORT}`);
-    });
+app.listen(PORT, () => {  console.log(`Server started on ${PORT}`);    });
